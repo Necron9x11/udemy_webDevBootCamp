@@ -1,0 +1,333 @@
+
+<!--CSS Notes-->
+
+<!--The General Rule------------------------------------------------->
+
+Follows a key:value pair
+
+selector {
+  property: value;
+  anotherProperty: value;
+}
+
+
+<!--CSS COLORS------------------------------------------------------->
+
+<!--https://www.w3schools.com/colors/colors_picker.asp-->
+<!--https://www.webpagefx.com/web-design/color-picker/-->
+<!--Red in Named (built-in) Colors Format-->
+
+
+h1 {
+
+  color: red
+
+}
+
+<!--Red in HEX Colors Format-->
+
+h1 {
+  color: #ff0000
+
+}
+
+
+<!--Red in RGB Colors Format -->
+
+h1 {
+  color: rgb(255, 0, 0)
+
+}
+
+
+
+<!--Red in RGBA COLORS Format (the "A" is a transparency level value) -->
+
+h1 {
+  color: rgba(255, 0, 0, 5)
+
+}
+
+
+
+<link rel="stylesheet" type="css/text" href="">
+
+<style type="text/css"></style>
+
+
+<!--PROPERTIES------------------------------------------------------->
+
+color: <!-- setsx tect color -->
+background:  red <!-- sets backgound color to specified color in named, rgb, rgba, or hex format -->
+background-color: < color >
+background: url()
+background-repeat: no-repeat;
+background-size: cover;
+
+text-decoration: line-through;
+
+<!--CSS SELECTORS---------------------------------------------------->
+<!--https://css-tricks.com/attribute-selectors/-->
+<!--https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize&#45;&#45;net-16048-->
+<!--https://www.cheatography.com/dimitrios/cheat-sheets/the-30-css-selectors-you-must-memorize/-->
+
+<!--Element Selector-->
+
+The element selector adds styling by referencing the element tag itself.
+
+div {
+  < one or more element styling properties go here >
+}
+<!--ID Selector -->
+
+In the HTML add id="< id name >" to an element -->
+In the CSS file define a style for the id.
+An id may be assigned to only one element.
+Id's are denoted by a "#" in a CSS file.
+
+#< id name > {
+  < one or more element styling properties go here >
+}
+
+
+<!--Class Selector-->
+
+In the HTML add class="< id name >" to an element -->
+In the CSS file define a style for the class.
+Classes may be assigned to multiple elements at a time.
+Id's are denoted by a "." in a CSS file.
+
+.< id name > {
+  < one or more element styling properties go here >
+}
+
+
+
+<!--SPECIFICITY-->
+
+In order of specificity weight:
+
+<!--Type Selectors-->
+li {
+
+}
+
+li a {
+
+}
+
+
+li + a {
+
+}
+
+
+
+<!--Class, Attribute, and Pseudo-Class Selectors-->
+
+.hello {
+
+}
+
+input[type="text"]{
+< element >[< anchor tag >] {
+
+ < formatting goes here >
+
+}
+
+a:hover
+input:checked
+
+<!--ID Selector-->
+
+
+
+
+h1 {
+
+    font-size: 75px;
+}
+
+span {
+
+    font-size: 2.0em;
+}
+
+
+<!--ADVANCED SELECTORS----------------------------------------------->
+
+/*Star*/
+
+* {
+    border: 1px solid lightgrey;
+}
+
+/*Descendant Selectors*/
+
+li a {
+
+/* select all anchor tags *inside* of an li tag */
+
+    color: red;
+}
+
+/*Adjacent Selector*/
+
+h4 + ul {
+
+/* all ul elements adjacent to (on the same document level as) an h4 element  */
+
+    border: 4px solid red;
+}
+
+/*Attribute Selector*/
+
+a[href="http://www.google.com"] {
+    background: orange
+}
+
+a[target="_top"] {background: blue;}
+
+/*input[type="text"] {background: blue}*/
+/*input[type="checkbox"] {background: blue}*/
+
+
+/*nth of type*/
+/*select every nth occurrence of some type*/
+
+ul:nth-of-type(3){
+    background: purple;
+}
+
+
+<!--NOTE ON BLOCK LEVEL VERSUS INLINE TEXT AND SELECTION-->
+
+<!--You can change the display property for your elementS from block to inline-block, which works differently and it will allow the element take only the width of its text contents:-->
+
+<!--< ELEMENT > {-->
+    <!--display: inline-block;-->
+<!--}-->
+
+
+<!--Fonts------------------------------------------------------------>
+
+font-family
+
+<!-- Font Size -->
+  px - size in pixels
+  em - size relative to losing element. so 2.0 would be 2x the size of the enclosing elements font size.
+
+<!--https://developer.mozilla.org/en-US/docs/Web/CSS/font-family-->
+
+<!--Font Weight -->
+
+p {
+
+    font-weight: bold;
+
+}
+
+  <!--for some fonts can be 100-800. Steps by increments of 100. So-->
+  <!--100, 200, 300, etc.-->
+
+<!--You can also read more about it here: https://css-tricks.com/almanac/properties/f/font-weight/-->
+
+<!--Web safe fonts: : https://www.w3schools.com/CSSref/css_websafe_fonts.asp-->
+<!--and also  https://css-tricks.com/sans-serif/-->
+
+<!--The keyword value normal maps to the numeric value 400 and the value bold maps to 700.-->
+
+
+
+<!--Line Height-->
+
+p {
+
+    line-height: 2;
+
+    /* usually set to no more than 1.5 or 2*/
+
+}
+
+<!-- Text Align -->
+
+h1 {
+
+    text-align: right;
+                <!--center; -->
+                <!--etc-->
+
+}
+
+
+
+<!--Text Decoration-->
+
+p{
+
+    text-decoration:    underline;
+    /*text-underline: #0033cc;*/
+
+}
+
+<!--GOOGLE FONTS-->
+    <!--Alternative way to link to multiple google fonts:-->
+    <!--<link href='https://fonts.googleapis.com/css?family=Raleway:400,700|Indie+Flower' rel='stylesheet' type='text/css'>-->
+    <!--Note that both Google Font families are referenced in the same link tag.
+
+
+<!--https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts-->
+<!--https://fonts.google.com/-->
+
+<!--LINKING TO LOCAL CUSTOM FONTS-->
+
+
+<!--BOX MODEL-------------------------------------------------------->
+<!--https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model-->
+<!--https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing-->
+
+<!--The 4 Parts of the Box-->
+
+<!--CONTENT-->
+
+
+<!--PADDING-->
+<!--https://developer.mozilla.org/en-US/docs/Web/CSS/padding-->
+
+p {
+
+    padding: 10px <!-- applies to all four sides -->
+
+}
+
+
+/* Apply to all four sides */
+padding: 1em;
+
+/* vertical | horizontal */
+padding: 5% 10%;
+
+/* top | horizontal | bottom */
+padding: 1em 2em 2em;
+
+/* top | right | bottom | left */
+padding: 2px 1em 0 1em;
+<!--BORDER-->
+
+
+<!--MARGIN-->
+<!--https://developer.mozilla.org/en-US/docs/Web/CSS/margin-->
+
+/* Apply to all four sides */
+margin: 1em;
+margin: -3px;
+
+/* vertical | horizontal */
+margin: 5% auto;
+
+/* top | horizontal | bottom */
+margin: 1em auto 2em;
+
+/* top | right | bottom | left */
+margin: 2px 1em 0 auto;

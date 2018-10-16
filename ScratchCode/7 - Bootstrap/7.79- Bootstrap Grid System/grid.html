@@ -1,0 +1,84 @@
+<!--The Grid System: https://www.udemy.com/the-web-developer-bootcamp/learn/v4/t/lecture/3861308?start=0
+-->
+<!--The Grid System Part 2: https://www.udemy.com/the-web-developer-bootcamp/learn/v4/t/lecture/3884458?start=0-->
+<!--In the next lecture you will learn about the Bootstrap grid system. -->
+
+<!--If your screen size is too small then the columns in the grid will stack vertically instead of sitting side-by-side. -->
+
+<!--To correct this issue you can change the col-lg-6  classes to col-md-6  instead.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Grid System</title>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style type="text/css">
+        .pink {
+            background: pink;
+            border: 1px solid purple;
+
+        }
+
+        .orange {
+            background: orange;
+            border: 1px dashed red;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- =============================+++++= -->
+<!-- 1. Understand Purpose fo Grid System-->
+<!-- 2. Understand the 4 different sizes -->
+<!-- 3. Write Nested Grids               -->
+<!-- ====================================-->
+
+<div class="container" >
+    <!--<div class="row" >-->
+        <!--<div class="col-lg-3 col-md-2 pink" >COL LG 6</div>-->
+        <!--<div class="col-lg-3 col-md-2 pink" >COL LG 6</div>-->
+        <!--<div class="col-lg-3 col-md-2 pink" >COL LG 6</div>-->
+        <!--<div class="col-lg-3 col-md-2 pink" >COL LG 6</div>-->
+        <!--<div class="col-lg-3 col-md-2 pink" >COL LG 6</div>-->
+        <!--<div class="col-lg-3 col-md-2 pink" >COL LG 6</div>-->
+        <!--<div class="col-lg-3 col-md-2 pink" >COL LG 6</div>-->
+        <!--<div class="col-lg-3 col-md-2 pink" >COL LG 6</div>-->
+        <!--<div class="col-lg-3 col-md-2 pink" >COL LG 6</div>-->
+        <!--<div class="col-lg-3 col-md-2 pink" >COL LG 6</div>-->
+        <!--<div class="col-lg-3 col-md-2 pink" >COL LG 6</div>-->
+        <!--<div class="col-lg-3 col-md-2 pink" >COL LG 6</div>-->
+
+        <!--&lt;!&ndash;<div class="col-lg-8 pink">COL LG 6</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="col-lg-3 pink">COL LG 6</div>&ndash;&gt;-->
+
+    <!--</div>-->
+    <div class="row">
+        <div class="col-md-3 col-sm-6 pink">
+            <div class="row">
+                <div class="col-lg-6 orange">First Half</div>
+                <div class="col-lg-6 orange">Other Half</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 pink">Tour Date</div>
+        <div class="col-md-3 col-sm-6 pink">Tour Date</div>
+        <div class="col-md-3 col-sm-6 pink">
+            <div class="row">
+                <div class="col-lg-2 orange" ></div>
+                <div class="col-lg-2 orange" ></div>
+                <div class="col-lg-2 orange" ></div>
+                <div class="col-lg-2 orange" ></div>
+                <div class="col-lg-2 orange" ></div>
+                <div class="col-lg-2 orange" ></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

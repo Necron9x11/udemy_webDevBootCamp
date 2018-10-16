@@ -1,0 +1,84 @@
+/*grey box is 20px border around the bod*/
+/*body has an explicit width*/
+/*block quote effected is a left border*/
+/*make date all caps with CSS*/
+/*date has letter spacing*/
+/*Line between posts is a <hr> tag*/
+/*go crazy with colors and fonts and make it your own*/
+
+/*border color: #bdc3c7*/
+/*date color: #3498db*/
+/*h2 color #2c3e50*/
+
+/*font: source sans pro (google font)*/
+
+body{
+
+    /*margin-left: 20%;*/
+    /*margin-right: 20%;*/
+    /*border: 20px solid #bdc3c7;*/
+    /*padding: 25px;*/
+    font-family: 'Source Sans Pro', sans-serif;
+
+    border: 20px solid #bdc3c7;
+    padding: 20px;
+    max-width: 700px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+
+.postDate {
+
+    color: #3498db;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 4px;
+
+}
+
+div {
+
+    background-color: #fdfdfd;
+
+}
+
+/*First Paragraph of Each Post*/
+
+div p:nth-of-type(2) {
+
+    border-left: 6px solid lightgray;
+    padding-left: 6px;
+
+}
+
+/*First Character of Each Post*/
+
+div p:nth-of-type(2)::first-letter  {
+
+    color: #3498db;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 150%;
+
+}
+
+
+h2 {
+
+    color: #2c3e50;
+    font-size: 35px;
+
+}
+
+hr {
+
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    margin: 25px;
+}

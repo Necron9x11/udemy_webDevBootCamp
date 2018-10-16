@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript Notes</title>
+  <link rel="stylesheet" href="./javascript.css" type="text/css">
+
+</head>
+<body>
+<main id="section-eight">
+  <h1 class="section-main-title">Section 8></h1>
+  <h2 class="section-sub-title">Introduction to Javascript </h2>
+
+  <section id="primitives">
+    <h3>Introduce the 5 primitive data types</h3>
+    <ol>
+      <li>numbers</li>
+      <li>strings</li>
+      <li>booleans</li>
+      <li>null</li>
+      <li>undefined</li>
+    </ol>
+
+    <h3>Work with numbers and numeric operators</h3>
+    <ol>
+      <li>+ :  addition</li>
+      <li>- : subtraction</li>
+      <li>* : multiplication</li>
+      <li>/ : division</li>
+      <li>% : modulus</li>
+    </ol>
+
+    <h3>Work with strings and common string methods</h3>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="strings">
+    <h2>Strings</h2>
+    <p>
+        strings - surrounded by quotes. Single or double and you can nese single quotes inside double quotes. Use double
+                    quotes to surroudt a contraction like "can't"
+
+        "she said \"goodbye!\" "
+
+        "hello".length returns 5
+        hello[0] returns h
+
+    </p>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="variables">
+    <h2>Variables</h2>
+    <p>
+      JavaScript vars behave like any other vars.
+      = to assign
+      + to concatenate
+      JS is dynamically typed so you can assign mayvar = 50 and then assign myvar="fifty" and JS will change the type
+        of myvar from number to string on the fly.
+    </p>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="null-undefined">
+    <h2>NULL and undefined</h2>
+
+
+    <h3>undefined</h3>
+    <p>
+        undefined means something is empty/has not been assigned a value yet
+
+             if for example you create a var but do not assign a value, like as in:
+
+                var name;
+
+            and then try and reference it JS will respond with:
+
+                undefined
+
+    </p>
+
+    <h3>null</h3>
+
+    a value of null indicates that a var has explicitly been set to evaluate to mean nothing/empty.
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="methods">
+    <h2>Built in Methods</h2>
+
+
+    <h3>Alert</h3>
+
+    <p>Pop up a message box on the screen</p>
+
+
+    <h2>prompt</h2>
+    <p>myVar = prompt("As user for input here")</p>
+
+
+    <h2>console.log</h2>
+    <p>Output messages to the console (STDOUT)</p>
+
+
+    <h2>clear()</h2>
+
+
+    <h2>comments</h2>
+    <p>precede any line with "//" to comment that line out</p>
+    <pre>
+        var logo = document.querySelector("hplogo");
+    setInterval(function(){
+     logo.width+=5;
+    }, 100)
+    </pre>
+  </section>
+</main>
+<!--------------------------------------------------------------------------------------------------------------------->
+<main id="section-nine">
+  <h1 class="section-main-title">Section 9</h1>
+  <h2 class="section-sub-title">Javascript Basics: Control Flow</h2>
+
+  <section id="section-nine-objectives">
+    <ul>
+      <li>Objective 1: Evaluate complex logical statements</li>
+      <li>Objective 2: Write 3-part JS conditional statements
+        <ul>
+          <li>
+            <pre>
+              <code>
+                if
+                else
+                elseif
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </li>
+      <li>Objective 3: Write JS while loops and for loops
+        <ul>
+          <li>
+            <pre>
+              <code>
+                while
+
+                for
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </li>
+      <li>Translate Between For and While Loops</li>
+    </ul>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="boolean-operators">
+    <h2>Boolean Operators</h2>
+    <H3>Comparison Operators</H3>
+    <pre>
+      >
+      >=
+      <
+      <=
+      ==    equal to
+      !=    not equal to
+      ===   equal in value and in type
+      !==   not equal in value and in type
+
+      "==" performs type coercion, while "===" does not
+      type coercion means that JavaScript will try and force two values to be the same type and then
+      perform a comparison.
+
+      "===" does not perform type coercion - hence you should always use the triple equals operator
+
+    </pre>
+
+      some quirks
+      NaN == Nan is false (not a number)
+      null == undefined is true
+      1 == true is true (but false for any other number) Ths is not really surprising as it is due to the boolean meaning of 1 and 0.
+      0 == false is true (but false for any other number) Ths is not really surprising as it is due to the boolean meaning of 1 and 0.
+  </section>
+  <section id="logical-operators">
+    <h2>Logical Operators</h2>
+
+    <pre>
+      &&    AND
+      ||    OR
+      !     NOT
+    </pre>
+
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="truthy-falsy-values">
+    <h3>Truthy and Falsy Values</h3>
+    Values that are not <em>true</em> or <em>false</em>
+    <pre>
+      The following are always falsy:
+
+      null
+      0
+      false
+      ""
+      undefined
+      NaN
+
+      EVERYTHING Else if Truthy
+    </pre>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="conditionals">
+    <h2>Conditionals</h2>
+    <pre>
+      if
+      else
+      else if
+    </pre>
+
+    <h3>if stataemen</h3>
+    <pre>
+      <script type="text/javascript"></script>
+      if(< condition/comparison >) {< then do what is inbetween the brackets >};
+    </pre>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+<section id="loops">
+<h2>Loops and DRY Programming</h2>
+
+ DRY = Don't Repeat Yourself
+
+<pre>
+  While loops repeat a block of code for as long as some condition is true.
+
+  while(< someCondition >){
+    //run some code
+  }
+
+  Beware infinite loops
+</pre>
+
+<h2>For Loops</h2>
+<pre>
+  for(init; condition; step){
+    //run some code
+  }
+</pre>
+</section>
+</main>
+<!--------------------------------------------------------------------------------------------------------------------->
+<main id="section-ten">
+  <h1 class="section-main-title">Section 10</h1>
+  <h2 class="section-sub-title">Javascript Basics: Functions</h2>
+
+  <section id="intro-to-functions">
+    <h3>Functions</h3>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="function-declaration">
+    <h3>Declaration</h3>
+    <pre>
+      DUH!
+    </pre>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="function-arguments">
+    <h3>Arguments</h3>
+    <pre>
+      More DUH!
+    </pre>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="the-return-keyword">
+    <h3>Return Keyword</h3>
+
+    <p>
+      Short circuiting a function with multiple returns.
+      Pretty straight forward. Think of it like a boolean AND where the initial expression evaluates to false.
+    </p>
+
+    <pre>
+      function someFunctionName(varToPassIn, returnToPassOut ){
+        if(returnToPassOut === 1) {
+          return varToPassIn
+        }
+
+        return "This is not what you passed in"
+      }
+    </pre>
+
+    <strong>There are Two Types of Function Declaration </strong>
+    <pre>
+    //function declaration
+
+      function functionName() {
+        //do some cool shit
+        return someResult
+      }
+
+    //function expression
+
+      var myVar = function functionName() {
+        //do some cool shit
+        return someResult
+      }
+    </pre>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+   <section id="scope">
+
+     <h3>Scope</h3>
+
+     <p>
+      variables defined inside a fuHigh Order Functions on are not accessible outside the function
+      variables defined outside a function are available inside a function. \
+     </p>
+
+     <p>
+       Think of it like Chinese Dolls where anything defined in a lower container has access to everythin gin the higher containers.
+       Child scopes have access to objects defined inside a Parent scope.
+     </p>
+     <p>
+        So to be safe if you use a var inside a function always declare it so the scope is local tot he function. That way
+        if the same var exists outside the function, in the global scope, you will not trample on it and cause yourself grief.
+     </p>
+   </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="high-order-functions">
+    <h3>High Order Functions</h3>
+    <p>
+      They either take another function as an argument or they return a function.
+    </p>
+      see: setInterval() for a function that takes a function as one of its parameters.
+    <p>
+      When passing a function as a parameter in a function call you can create the passed function 'on the fly' by using an
+       anonymous function:
+    </p>
+    <pre>
+          setInterval(function(){
+            doSomeCoolShit
+          }, 2000);
+    </pre>
+  </section>
+</main>
+<!--------------------------------------------------------------------------------------------------------------------->
+<main id="section-eleven">
+
+  <h1 class="section-main-title">Section 11</h1>
+  <h2 class="section-sub-title">Javascript Basics: Arrays</h2>
+
+  <section id="arrays">
+    <h3>Arrays</h3>
+
+    <p>var myArray = [thing1 , thing2, thing3, thing4, ...etc]</p>
+
+    <p>Arrays indexed starting at 0</p>
+
+    <p>Basically they are the same as all the other arrays you ever worked with.</p>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="defining-arrays">
+    <h4>Defining arrays</h4>
+
+    <p>
+      var myArray = [] -- defines an empty array
+      var myArray = new Array() //uncommon usage
+    </p>
+
+    <p>you can mix and match data types in an array. i.e.  a single array can hold both text and numbers, etc.</p>
+
+    <p>arrays have a length property so myArray.length will return thge nember of array elements in the array.</p>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="array-methods">
+    <h4>Array Methods</h4>
+
+    <pre>
+      - push/pop
+      - shift/unshift
+      - indexOf
+      - slice
+
+    </pre>
+
+    <strong>push/pop</strong>
+
+    <p>
+      push into an array (append)
+      pop off tail element of an array (return it and remove it)
+
+      shift/unshift remove and add to the front of an array.
+
+      indexOf - returns the index of the *first* occurrence of the requested array element. i.e. if you look for:
+    </p>
+
+    <pre>
+        "ballz" in the array myArray = ["ballz", "my", "hairy", "ballz"] :
+
+            myArray.indexOf(""ballz");
+
+        you get a value of 0 returned and not 3.
+
+      You can use indexOf to determines if an element exists in an array or not as it will return a -1 if thee element
+        requested does not exit.
+      So using the array from above:
+
+          myArray.indexOf("blue")
+
+      you get back a value of -1 since "blue" is not a member of the array.
+
+    </pre>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="slices">
+      <h3>Slices</h3>
+      <p>cuts out slices of an array - works like a slice in python so using the array from above:</p>
+      <pre>
+          var myNewArray = myArray.slice(1,3)  yields:
+
+            myNeArray = ["my", "hairy"]
+      </pre>
+          <p>because the range's end is non inclusive (i.e. 1,3 means get elements 1 and all elements up to BUT NOT INCLUDING 3)</p>
+      </p>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="array-iteration">
+    <h3>Array Iteration </h3>
+
+    <strong>For Loop Iteration</strong>
+
+    <p>To loop over an array using a for loop you need make use of the arrays <em>length</em> property:</p>
+
+    <pre>
+      for(var i = 0; i < myArray.length; i++) {
+        console.log(myArray[i]);
+      }
+    </pre>
+
+    <strong>While Loop Iteration</strong>
+
+    <pre>
+        var count = 0;
+
+        while(count < myArray.length) {
+          console.log(myArray[count]
+          count++;
+      }
+    </pre>
+
+    <strong>forEach Loop Iteration</strong>
+    <p><a href="https://www.udemy.com/the-web-developer-bootcamp/learn/v4/t/lecture/3861408?start=0">Colt's Web Dev BootCamp - 11.134 Array Iteration</a></p>
+
+    <pre>
+    forEach is a method defined for arrays
+
+    arr.forEach(someFunction) --> the function is callewd fo every element in the array so:
+
+      myArray.forEach(function(fondle){
+        console.log(fondle);
+      });
+
+
+    var myNumberArray = []
+
+    for(i=1; i<11; i++){
+        myNumberArray[i] = i
+    }
+
+    for(i=0; i<myNumberArray.length;i++){
+        if(myNumberArray[i] % 3 === 0){
+            console.log(myNumberArray[i])
+        };
+    };
+    </pre>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="foreach-method">
+    <h2>Array .forEach Method</h2>
+
+    <p>
+      It is what it sounds like
+    </p>
+
+    <pre>
+      var array1 = ['a', 'b', 'c'];
+
+      array1.forEach(function(element, i, arr) {
+        console.log("current array element = " + element + " current index = " + i + " and the whole array is " + arr);
+    });
+  </pre>
+  </section>
+</main>
+<!--------------------------------------------------------------------------------------------------------------------->
+<main id="section-twelve">
+
+    <h1 class="section-main-title">Section 12</h1>
+    <h2 class="section-sub-title">Javascript Basics: Objects</h2>
+
+    <section id="objects">
+      <h3>Objects</h3>
+
+      <pre>
+        var person {
+          name: "Jon",
+          age: "44",
+          state: "TX",
+          city: "Bandera"
+          dogPerson: "Y"
+        }
+      </pre>
+
+      <p>
+        Two types of Object notation:
+      <ul>
+        <li>Bracket Notation
+        <ul>
+          <li>console.log(person["name"]);</li>
+          <li>Can be Used to Lookup a Variable
+            <ul>
+              <li>var str = "name";</li>
+              <li>someObject.str;  //doesn't look for "name"</li>
+              <li>someObject[str]; //does evaluate str snd looks for name</li>
+            </ul></li>
+        </ul></li>
+
+        <li>Dot Notation
+          <ul>
+            <li>console.log(person.name)</li>
+            <li>can't be used if property starts with a number
+              <ul>
+                <li>someObject.4blah;  //INVALID</li>
+                <li>someObject["4blah"];  //VALID</li>
+              </ul></li>
+            <li>You cannot use dot notation for property names with spaces
+              <ul>
+                <li>someObject.fav color;  //INVALID</li>
+                <li>someObject["fav color"] //VALID;</li>
+              </ul>
+            </li>
+            </ul>
+          </ul>
+    </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+   <section id="updating-data">
+    <H3>Updating Data</H3>
+
+    <p>to update numerical data in an object:</p>
+
+    <ul>
+      <li>person["age"] += 1;</li>
+      <li>person["age"] = 25</li>s
+    </ul>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="creating-objects">
+    <h3>Creating Objects</h3>
+
+    <p>make an empty object and then add to it</p>
+    <pre><code>
+      var person = {}
+      person.name = "Travis",
+      person.age = 21,
+      person.city = "LA";
+    </code></pre>
+    <p>all at once</p>
+    <pre><code>
+      var person = {
+        name: "Travis",
+        age: 21,
+        city: "LA"
+      };
+    </code></pre>
+    <p>another way to initialize an object</p>
+    <pre><code>
+      var person = new Object();
+      person.name = "Travis",
+      person.age = 21,
+      person.city = "LA";
+    </code></pre>
+
+    <p>objects can hold multiple types od data - numbers, strings, other objects, etc.</p>
+    <p>javascript objects are like python dictionaries</p>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="comparing-objects-and-arrays">
+    <h3>Comparing Objects and Arrays</h3>
+
+  </section>
+  <section id="nested-objects-and-arrays">
+    <h3>Nested Objects and Arrays</h3>
+
+    <p>you can nest objects inside arrays and arrays inside objects</p>
+
+    <strong>Objects Nested in Arrays</strong>
+    <pre><code>
+      var posts = [
+        {
+          title: "Cats are mediocre",
+          author: "Colt",
+          comments: ["Awesome post", "Terrible post"]
+        },
+        {
+          title: "Cats are actually awesome",
+          author: "Cat Luvr",
+          comments: ["<3", "Go to hell I hate you"]
+        }
+      ]
+
+      > posts[1].comments[1]
+      > "Go to hell I hate you"
+    </code></pre>
+  </section>
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="adding-methods-to-objects">
+    <h3>Adding Methods to Objects</h3>
+
+    <pre><code>
+      var object = {
+        name: "Chuck",
+        age: 45,
+        isCool: false,
+        friends: ["bob", "tina"],
+        add: function(x,y){
+          return x + y;
+        }
+      }
+    </code></pre>
+  </section>
+
+<!--------------------------------------------------------------------------------------------------------------------->
+  <section id="keyword-this">
+  <h3>The Object Keyword This</h3>
+
+  </section>
+</main>
+<!--------------------------------------------------------------------------------------------------------------------->
+<main id="section-thirteen">
+
+  <h1 class="section-main-title">Section 13</h1>
+  <h2 class="section-sub-title">Dom Manipulation</h2>
+
+  <section id="intro=to=the-dom">
+
+
+
+  </section>
+
+</main>
+
+
+</body>
+</html>
+
+

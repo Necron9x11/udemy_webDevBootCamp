@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Register</h1>
+<form action="">
+  <!-- First and Last Names -->
+  <div>
+    <label for="firstName">First Name</label>
+    <input id="firstName" type="text" name="firstName" placeholder="First Name" required>
+    <label for="lastName">Last Name</label>
+    <input id="lastName" type="text" name="lastName" placeholder="Last Name" required>
+  </div>
+
+  <!-- Gender Bender -->
+  <div>
+    <label for="genderMale">Male</label>
+    <input id="genderMale" type="radio" name="gender" value="male" placeholder="male" required>
+    <label for="genderFemale">Female</label>
+    <input id="genderFemale" type="radio" name="gender" value="female" placeholder="female" required>
+    <label for="genderOther">Other</label>
+    <input id="genderOther" type="radio" name="gender" value="spongebob" placeholder="other" required>
+  </div>
+
+  <!-- Email and Password -->
+
+  <div>
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" placeholder="email" required>
+    <label for="password">Password:</label>
+    <!--<input id="password" type="password" name="password" minlength="5" maxlength=10" placeholder="password" required>-->
+    <input id="password" type="password" name="password" pattern=".{5,10}" title="5 to 10 characters" placeholder="password" required>
+
+  </div>
+
+  <!--Date of Birth-->
+
+  <div>
+    <label for="bdayMonth">Birthday
+    <select id="bdayMonth" name="bdayMonth"  required>
+      <option value="January">January</option>
+      <option value="February">Feburary</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+    </select>
+
+    <select name="bdayDay" id="bdayDay" required>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
+
+    <select name="bdayYear" id="bdayYear" required>
+      <option value="1900">1900</option>
+      <option value="1901">1901</option>
+      <option value="1902">1902</option>
+      <option value="1903">1903</option>
+      <option value="1904">1904</option>
+      <option value="1905">1905</option>
+    </select>
+    </label>
+  </div>
+
+  <!-- Acknowledgement -->
+
+  <div>
+    <label for="acknowledgement">I agree to the terms and conditions</label>
+    <input id="acknowledgement" type="checkbox" name="acknowledgment" required>
+  </div>
+
+  <input type="submit">
+</form>
+
+<p>version=1.8</p>
+</body>
+</html>
